@@ -174,3 +174,4 @@ button,.btn{
 .photobtn{background:#17191bdd!important;color:#00D2FE!important;border:1px solid #344047!important;font-size:11px!important}
 .plate{font-size:10px!important}
 .menucard{display:flex;align-items:center;gap:13px;cursor:pointer}.menuicon{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:#00D2FE16;color:#00D2FE;border:1px solid #00D2FE35;font-weight:900;font-size:18px}.menucard>div:nth-child(2){flex:1}.menucard p{margin:4px 0 0;font-size:11px}.chev{font-size:28px;color:#69757c}.pendingrow h3{margin:10px 0 4px}.pendingrow p{margin:0;font-size:11px}
+.secondary{margin-top:9px!important;background:#23272b!important;color:#00D2FE!important;border:1px solid #344047!important;box-shadow:none!important}
