@@ -207,3 +207,33 @@ h1{font-size:1.8rem!important} h2{font-size:1.35rem!important} h3{font-size:1.12
 .section+ .card .row b{font-size:18px;max-width:62%;text-align:right;overflow-wrap:anywhere}
 .recordactions{display:flex;gap:10px;margin-top:14px}.recordactions button{min-height:44px;padding:8px 14px;border-radius:12px;border:1px solid #3a4650;background:#20272d;color:#fff;font-weight:700}.recordactions .dangerbtn{color:#ff8b8b}
 @media(max-width:390px){.modules{grid-template-columns:repeat(2,minmax(0,1fr))}.mod{font-size:16px}}
+
+
+/* V6.7 — Información del vehículo realmente más grande
+   Estas reglas llevan !important porque reglas antiguas de .row las anulaban. */
+.infocard .row{padding:18px 2px!important;align-items:center!important}
+.infocard .row .muted,
+.infocard .row>span:first-child{
+  font-size:18px!important;
+  line-height:1.25!important;
+  font-weight:650!important;
+}
+.infocard .row b,
+.infocard .rowvalue b{
+  font-size:21px!important;
+  line-height:1.25!important;
+  font-weight:800!important;
+  max-width:none!important;
+  overflow-wrap:anywhere!important;
+}
+.infocard .rowvalue{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:9px!important;
+  max-width:62%!important;
+  text-align:right!important;
+}
+.infocard .rowchev{font-size:25px!important;color:#00D2FE!important}
+
+.sectionaction{display:flex!important;align-items:center;justify-content:space-between;gap:12px}.sectionaction .add{font-size:16px;padding:9px 12px}
