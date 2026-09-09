@@ -87,8 +87,22 @@ function useful(v){return !(v===undefined||v===null||v==='')}
 function mergeObjects(incoming,local){let out={...(incoming||{})};Object.entries(local||{}).forEach(([k,v])=>{if(useful(v))out[k]=v});return out}
 function mergeArray(local,incoming){let m=new Map();(incoming||[]).forEach(x=>m.set(x.id||JSON.stringify(x),x));(local||[]).forEach(x=>{let k=x.id||JSON.stringify(x),prev=m.get(k);m.set(k,prev?mergeObjects(prev,x):x)});return [...m.values()]}
 function mergeVehicle(incoming,local){let v=mergeObjects(incoming,local);v.insurance=mergeObjects(incoming?.insurance,local?.insurance);v.photo=local?.photo||incoming?.photo||'';v.mileageHistory=mergeArray(local?.mileageHistory||[],incoming?.mileageHistory||[]);return v}
-function mergeData(incoming,local){incoming=normalizeData(incoming);local=normalizeData(local);let im=new Map(incoming.vehicles.map(v=>[v.id,v])),lm=new Map(local.vehicles.map(v=>[v.id,v])),ids=new Set([...im.keys(),...lm.keys()]);let vehicles=[...ids].map(id=>im.has(id)&&lm.has(id)?mergeVehicle(im.get(id),lm.get(id)):(lm.get(id)||im.get(id)));return {schemaVersion:Math.max(Number(incoming.schemaVersion||0),Number(local.schemaVersion||0),4),vehicles,workshop:mergeArray(local.workshop,incoming.workshop),tires:mergeArray(local.tires,incoming.tires),itv:mergeArray(local.itv,incoming.itv),taxes:mergeArray(local.taxes,incoming.taxes),other:mergeArray(local.other,incoming.other)}}
+function mergeData(incoming,local){
+  incoming=normalizeData(incoming);local=normalizeData(local);
+  let im=new Map(incoming.vehicles.map(v=>[v.id,v])),lm=new Map(local.vehicles.map(v=>[v.id,v])),ids=new Set([...im.keys(),...lm.keys()]);
+  let vehicles=[...ids].map(id=>im.has(id)&&lm.has(id)?mergeVehicle(im.get(id),lm.get(id)):(lm.get(id)||im.get(id)));
+  return {schemaVersion:Math.max(Number(incoming.schemaVersion)||0,Number(local.schemaVersion)||0,7),
+    vehicles,
+    workshop:mergeArray(local.workshop,incoming.workshop),
+    tires:mergeArray(local.tires,incoming.tires),
+    itv:mergeArray(local.itv,incoming.itv),
+    taxes:mergeArray(local.taxes,incoming.taxes),
+    other:mergeArray(local.other,incoming.other),
+    insuranceHistory:mergeArray(local.insuranceHistory,incoming.insuranceHistory),
+    insurancePolicies:mergeArray(local.insurancePolicies,incoming.insurancePolicies)
+  }
+}
 function downloadBackup(name){let a=document.createElement('a'),b=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),d=new Date(),stamp=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+'_'+String(d.getHours()).padStart(2,'0')+String(d.getMinutes()).padStart(2,'0');a.href=URL.createObjectURL(b);a.download=`Mi_Garaje_${name}_${stamp}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
-function importBackup(file){if(!file)return;let r=new FileReader();r.onload=()=>{try{let data=JSON.parse(r.result);if(!data||!Array.isArray(data.vehicles))throw 0;if(!confirm('Se hará primero una copia de seguridad de los datos actuales y después se fusionará el archivo. No se borrarán las fotos ni los datos que ya tengas. ¿Continuar?'))return;downloadBackup('antes_de_importar');let previous=db;db=mergeData(data,db);if(!save()){db=previous;return}alert('Datos fusionados correctamente. Se han conservado los datos y fotos existentes.');state.page='garage';state.filter='Todos';render()}catch(e){alert('Archivo no válido.')}};r.readAsText(file)}
+function importBackup(file){if(!file)return;let r=new FileReader();r.onload=()=>{try{let data=JSON.parse(r.result);if(!data||!Array.isArray(data.vehicles))throw 0;if(!confirm('Se hará primero una copia de seguridad de los datos actuales y después se fusionará el archivo. No se borrarán las fotos ni los datos que ya tengas. ¿Continuar?'))return;downloadBackup('antes_de_importar');let previous=db;db=mergeData(data,db);if(!save()){db=previous;return}alert('Datos fusionados correctamente. Se han conservado los datos y fotos existentes.');state.page='garage';state.filter='Todos';render()}catch(e){console.error(e);alert('No se ha podido importar el archivo. Comprueba que estás usando Mi Garaje V7.1 y un JSON de Mi Garaje.')}};r.readAsText(file)}
 function backup(){downloadBackup('copia_completa')}
 function render(){({garage,vehicle,workshop,tires,insurance,itv,taxes,docs,other,agenda,spend,more,pending}[state.page]||garage)()}render();
