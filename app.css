@@ -263,3 +263,20 @@ h1{font-size:1.8rem!important} h2{font-size:1.35rem!important} h3{font-size:1.12
 .modulepage .eventcard .date{font-size:18px!important}
 .salecard{margin-top:14px!important}.salehead{display:flex;align-items:center;justify-content:space-between;font-size:20px;margin-bottom:8px}.salehead span{font-size:14px;color:#00D2FE;border:1px solid #00D2FE55;border-radius:999px;padding:4px 9px}.salecard .row>span:first-child,.salecard .row .muted,.salecard .row>b{font-size:20px!important}.textbtn,.saleaction{width:100%;margin-top:10px;border-radius:12px;padding:10px 13px}.textbtn{border:0;background:transparent;color:#00D2FE}.saleaction{border:1px solid #82464b;background:#251719;color:#ff9aa2;font-weight:800}.fullbtn{width:100%;margin-top:10px}
 @media(max-width:390px){.navdashboard{grid-template-columns:1fr 1fr!important}.navdash{min-height:112px!important;padding-left:13px!important}.navdash b{font-size:20px!important}.navdash .dashlabel{font-size:17px!important}}
+
+/* V8.1 UI ajuste solicitado — solo tipografía de tarjetas y menú inferior */
+/* Mantiene exactamente el diseño, estructura, fondo y navegación existentes. */
+.vehicle .vtitle strong{font-size:20px!important;line-height:1.12!important}
+.vehicle .plate{font-size:20px!important;line-height:1.05!important;padding:6px 9px!important;margin-top:6px!important}
+.vehicle .metric{font-size:20px!important;line-height:1.08!important;color:#aeb9c0!important;opacity:1!important}
+.vehicle .metric span{color:#aeb9c0!important;opacity:1!important}
+.vehicle .metric b{font-size:20px!important;line-height:1.08!important;color:#f2f4f5!important;opacity:1!important;margin-top:4px!important}
+.vehicle .metric b.good{color:var(--green)!important}.vehicle .metric b.warn{color:var(--orange)!important}.vehicle .metric b.bad{color:var(--red)!important}
+/* Mismo alto (64px), iconos y texto algo mayores */
+.bottom{height:64px!important}
+.nav{padding:4px 0 2px!important;font-size:16px!important;line-height:1.05!important;color:#aeb9c0!important;opacity:1!important}
+.nav b{font-size:25px!important;line-height:1!important;margin-bottom:2px!important;color:inherit!important;opacity:1!important}
+.nav.on{color:#00D2FE!important}
+/* Evita el efecto de opciones progresivamente apagadas */
+.navdash,.navdash .dashlabel,.navdash b,.navdash small{opacity:1!important}
+.navdash .dashlabel{color:#c4cdd2!important}.navdash b{color:#f4f7f8!important}.navdash small{color:#aeb9c0!important}
