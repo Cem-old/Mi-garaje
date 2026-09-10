@@ -1,14 +1,13 @@
-MI GARAJE — VERSIÓN PÚBLICA SIN DATOS REALES
+MI GARAJE V8.0
 
-Contiene solo 3 vehículos ficticios y registros de demostración.
+Publicación:
+1. Sustituye en GitHub los archivos de esta carpeta/ZIP.
+2. Mantén todos los archivos en la raíz del repositorio.
+3. Espera a que GitHub Pages actualice.
+4. En el iPhone comprueba que aparece: © Cem 2026 · V8.0
 
-GitHub Pages:
-1. Crea un repositorio nuevo (por ejemplo Mi-Garaje).
-2. Sube todos los archivos de esta carpeta a la raíz.
-3. Settings > Pages.
-4. Build and deployment: Deploy from a branch.
-5. Selecciona main y /(root) y guarda.
-6. Abre en Safari del iPhone la dirección que te dará GitHub.
-7. Compartir > Añadir a pantalla de inicio.
-
-NO subas a un repositorio público las versiones privadas anteriores.
+IMPORTANTE
+- La clave de almacenamiento sigue siendo mi_garaje_public_demo_v1.
+- Actualizar la aplicación no borra los datos privados guardados en el navegador.
+- Una instalación realmente vacía muestra la pantalla Bienvenido a Mi Garaje.
+- Antes de pruebas importantes, exporta una copia completa.
