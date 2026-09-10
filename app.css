@@ -244,3 +244,22 @@ h1{font-size:1.8rem!important} h2{font-size:1.35rem!important} h3{font-size:1.12
 .infocard .row b{font-size:20px!important;font-weight:850!important;max-width:64%!important;text-align:right!important}
 
 .welcome{padding-top:28px}.welcome .card h1{margin-top:0}.welcome .add{width:100%;margin-top:12px}
+
+/* V8.1 — ficha limpia, tarjetas de navegación y legibilidad */
+.navdashboard{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;padding:12px 14px 16px!important;background:#101113!important}
+.navdash{position:relative!important;min-height:118px!important;padding:15px 36px 14px 15px!important;border:1px solid #2f3439!important;background:#1b1d20!important;border-radius:14px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;text-align:left!important;color:#f4f7f8!important}
+.navdash .dashlabel{font-size:18px!important;font-weight:800!important;color:#aeb9c0!important;margin-bottom:7px!important}
+.navdash b{display:block!important;font-size:22px!important;line-height:1.15!important;margin:0 0 6px!important;overflow-wrap:anywhere!important}
+.navdash small{font-size:15px!important;line-height:1.25!important;color:#89959c!important}
+.dashchev{position:absolute;right:13px;top:50%;transform:translateY(-50%);font-size:30px;color:#00D2FE}
+.modules{display:none!important}
+.type{display:none!important}
+.modulepage .row{padding:16px 2px!important;align-items:center!important}
+.modulepage .row>span:first-child,.modulepage .row .muted{font-size:20px!important;line-height:1.25!important;font-weight:700!important}
+.modulepage .row>b{font-size:20px!important;line-height:1.25!important;font-weight:850!important;max-width:62%!important;text-align:right!important;overflow-wrap:anywhere!important}
+.modulepage .card h3{font-size:20px!important}
+.modulepage .cost{font-size:20px!important}
+.modulepage .eventcard .ops,.modulepage .eventcard .ops li{font-size:18px!important;line-height:1.45!important}
+.modulepage .eventcard .date{font-size:18px!important}
+.salecard{margin-top:14px!important}.salehead{display:flex;align-items:center;justify-content:space-between;font-size:20px;margin-bottom:8px}.salehead span{font-size:14px;color:#00D2FE;border:1px solid #00D2FE55;border-radius:999px;padding:4px 9px}.salecard .row>span:first-child,.salecard .row .muted,.salecard .row>b{font-size:20px!important}.textbtn,.saleaction{width:100%;margin-top:10px;border-radius:12px;padding:10px 13px}.textbtn{border:0;background:transparent;color:#00D2FE}.saleaction{border:1px solid #82464b;background:#251719;color:#ff9aa2;font-weight:800}.fullbtn{width:100%;margin-top:10px}
+@media(max-width:390px){.navdashboard{grid-template-columns:1fr 1fr!important}.navdash{min-height:112px!important;padding-left:13px!important}.navdash b{font-size:20px!important}.navdash .dashlabel{font-size:17px!important}}
