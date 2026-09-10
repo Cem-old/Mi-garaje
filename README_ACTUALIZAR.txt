@@ -1,9 +1,7 @@
-ACTUALIZACIÓN A MI GARAJE V8.1
+MI GARAJE V8.2
 
-1. No borres la app ni sus datos del iPhone.
-2. Publica los archivos de este ZIP en GitHub Pages.
-3. Abre Mi Garaje y verifica el pie © Cem 2026 · V8.1.
-4. Comprueba primero un vehículo y después Más > Copias y datos.
-
-La actualización conserva la clave mi_garaje_public_demo_v1.
-Los vehículos vendidos dejan de generar avisos futuros, pero conservan todo su historial.
+Sustituye en GitHub todos los archivos públicos por los de esta carpeta/ZIP.
+No subas nunca el JSON privado de tu garaje.
+La clave localStorage sigue siendo mi_garaje_public_demo_v1.
+Al abrir V8.2, las fotos existentes se migran automáticamente a IndexedDB.
+Después de comprobar la V8.2, restaura/importa únicamente tu JSON privado desde la propia aplicación.

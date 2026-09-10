@@ -1,15 +1,10 @@
-MI GARAJE V8.1
+PUBLICAR MI GARAJE V8.2
 
-PUBLICAR DESDE GITHUB
-1. Sustituye en el repositorio los archivos incluidos en este ZIP.
-2. Mantén los archivos en la raíz del repositorio.
-3. GitHub Pages publicará la actualización.
-4. En el iPhone comprueba que aparece: © Cem 2026 · V8.1
-
-IMPORTANTE
-- La clave localStorage sigue siendo exactamente: mi_garaje_public_demo_v1
-- El ZIP público NO contiene los datos privados del garaje.
-- Antes de probar importaciones, exporta una copia JSON.
-- JSON es la copia maestra y contiene las fotos.
-- Excel es un formato editable externo: no incluye las fotos y al reimportarlo conserva las del iPhone.
-- La función Excel usa SheetJS 0.18.5 cargado desde jsDelivr. El resto de Mi Garaje sigue funcionando aunque ese recurso no esté disponible.
+1. Descomprime el ZIP.
+2. En Safari abre el repositorio GitHub de Mi Garaje.
+3. Add file > Upload files.
+4. Sube TODOS los archivos de la carpeta descomprimida.
+5. Commit changes en main.
+6. Abre GitHub Pages y verifica que el pie muestre © Cem 2026 · V8.2.
+7. Abre la app una vez y deja unos segundos para que migre las fotos a IndexedDB.
+8. No subas a GitHub ningún fichero JSON con datos reales.

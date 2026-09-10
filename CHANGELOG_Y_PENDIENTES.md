@@ -1,19 +1,17 @@
-# Changelog y pendientes — Mi Garaje V8.1
+# Changelog y pendientes — Mi Garaje V8.2
 
 ## Incorporado
-- Venta completa y transición a Histórico.
-- Cese de control de vencimientos futuros tras venta.
-- Tarjetas superiores convertidas en navegación principal; retirada la botonera de iconos pequeños.
-- Eliminada la etiqueta visible del tipo de vehículo sobre la foto.
-- Tipografía de detalle unificada a 20 px.
-- Compresión adaptativa de fotos.
-- Excel bidireccional con actualización por ID y conservación de fotos.
-- Restauración JSON completa añadida además de la fusión JSON.
-- Pólizas legacy eliminables correctamente.
-- Plan de mantenimiento mensual convertido en dato configurable por vehículo para no publicar datos privados en el código.
-- Código público limpiado de migraciones y valores específicos de un garaje real.
+- Nuevo almacenamiento de fotos en IndexedDB con migración automática desde localStorage.
+- JSON completo sigue incluyendo las fotos para que continúe siendo la copia maestra transportable.
+- Nuevos campos técnicos: titular, carburante, cilindrada, distintivo ambiental y NIVE.
+- Exportación e importación Excel ampliadas con los nuevos campos.
+- Próxima ITV tomada de `nextDate` aunque el registro procedente de DGT no tenga fecha de inspección.
+- Los datos DGT sin fecha de inspección no generan una fecha ficticia.
+- Se mantienen los ajustes visuales pedidos en V8.1: tipografía de tarjetas a 20 px, menú inferior mayor sin aumentar altura e intensidad uniforme de las opciones.
+- Se mantiene exactamente la clave `mi_garaje_public_demo_v1`.
 
 ## Pendiente de validar con uso real
-- Abrir, editar y reimportar el Excel desde iPhone (Excel/Numbers).
+- Confirmar en iPhone que la migración inicial de todas las fotos a IndexedDB libera espacio de localStorage.
+- Hacer una exportación JSON después de la migración y comprobar que la copia incluye todas las fotos.
+- Abrir, editar y reimportar Excel desde iPhone (Excel/Numbers).
 - Decidir si los juegos estacionales de neumáticos deben acumular km por juego físico o solo desde el último montaje.
-- Cualquier importe o histórico que no exista en los datos fuente debe seguir quedando en blanco hasta que se facilite.
