@@ -237,3 +237,8 @@ h1{font-size:1.8rem!important} h2{font-size:1.35rem!important} h3{font-size:1.12
 .infocard .rowchev{font-size:25px!important;color:#00D2FE!important}
 
 .sectionaction{display:flex!important;align-items:center;justify-content:space-between;gap:12px}.sectionaction .add{font-size:16px;padding:9px 12px}
+
+/* V7.6 — Información del vehículo: legibilidad reforzada */
+.infocard .row{padding:20px 2px!important}
+.infocard .row .muted,.infocard .row>span:first-child{font-size:20px!important;font-weight:700!important}
+.infocard .row b{font-size:24px!important;font-weight:850!important;max-width:64%!important;text-align:right!important}
