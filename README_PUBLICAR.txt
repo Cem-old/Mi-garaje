@@ -1,10 +1,9 @@
-PUBLICAR MI GARAJE V8.3.2
+MI GARAJE V8.4
 
-1. Descomprime el ZIP.
-2. En Safari abre el repositorio GitHub de Mi Garaje.
-3. Add file > Upload files.
-4. Sube TODOS los archivos de la carpeta descomprimida.
-5. Commit changes en main.
-6. Abre GitHub Pages y verifica que el pie muestre © Cem 2026 · V8.3.2.
-7. No subas a GitHub ningún fichero JSON con datos reales.
-8. Si la app instalada desde pantalla de inicio aparece vacía, exporta la copia JSON completa desde Safari y restáurala desde la app instalada.
+1. En GitHub, sube TODOS los archivos de esta carpeta a la raíz del repositorio Mi-garaje.
+2. Sustituye los archivos existentes y añade app-v84.js y app-v84.css.
+3. Haz Commit changes.
+4. Abre la web de GitHub Pages y recarga una vez.
+5. Comprueba en el pie: © Cem 2026 · V8.4
+
+IMPORTANTE: no subas ningún JSON privado al repositorio.
