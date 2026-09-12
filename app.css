@@ -280,3 +280,25 @@ h1{font-size:1.8rem!important} h2{font-size:1.35rem!important} h3{font-size:1.12
 /* Evita el efecto de opciones progresivamente apagadas */
 .navdash,.navdash .dashlabel,.navdash b,.navdash small{opacity:1!important}
 .navdash .dashlabel{color:#c4cdd2!important}.navdash b{color:#f4f7f8!important}.navdash small{color:#aeb9c0!important}
+
+
+/* V8.3 — iPhone safe-area + detalle de gastos */
+.top{
+  padding-top:calc(22px + env(safe-area-inset-top))!important;
+}
+.bottom{
+  height:calc(64px + env(safe-area-inset-bottom))!important;
+  padding-bottom:env(safe-area-inset-bottom)!important;
+}
+.copyright{
+  bottom:calc(64px + env(safe-area-inset-bottom))!important;
+}
+#app{
+  padding-bottom:calc(112px + env(safe-area-inset-bottom))!important;
+}
+.spendvehicle{display:flex!important;align-items:center!important;gap:12px!important;cursor:pointer!important;position:relative!important;padding-right:42px!important}
+.spendvehicle>div:first-child{flex:1!important;min-width:0!important}
+.spendvehicle .cost{float:none!important;white-space:nowrap!important;margin-left:auto!important}
+.spendchev{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:30px;color:#00D2FE}
+.spendtotal{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:14px!important}
+.spendtotal>b{font-size:28px!important;line-height:1!important}
