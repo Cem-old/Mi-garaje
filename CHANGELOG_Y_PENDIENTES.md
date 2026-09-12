@@ -1,4 +1,4 @@
-# Changelog y pendientes — Mi Garaje V8.3
+# Changelog y pendientes — Mi Garaje V8.3.2
 
 ## Incorporado
 - Corrección de seguro vigente: póliza sin fecha de fin = vigente, aunque renovación esté vacía.
@@ -19,3 +19,8 @@
 - Confirmar que el menú inferior no invade el indicador Home.
 - Revisar en Gastos varios vehículos con muchos movimientos y pagos de seguro.
 - Validar que las renovaciones calculadas automáticamente coinciden con las pólizas anuales y usar fecha manual en cualquier excepción.
+
+
+## V8.3.2
+- Corrección crítica: se restaura la función de Pendientes que faltaba en V8.3 y provocaba pantalla negra al iniciar.
+- Nueva clave de caché del service worker para forzar la actualización en iPhone/GitHub Pages.

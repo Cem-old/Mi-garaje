@@ -1,4 +1,4 @@
-MI GARAJE V8.3
+MI GARAJE V8.3.2
 
 Sustituye en GitHub todos los archivos públicos por los de esta carpeta/ZIP.
 No subas nunca el JSON privado de tu garaje.

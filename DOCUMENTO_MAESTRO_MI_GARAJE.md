@@ -1,4 +1,4 @@
-# Documento maestro público — Mi Garaje V8.3
+# Documento maestro público — Mi Garaje V8.3.2
 
 ## Reglas invariables
 - Clave localStorage: `mi_garaje_public_demo_v1`. No cambiar.
@@ -9,7 +9,7 @@
 - Bicicletas: sin matrícula, primera matriculación, seguro, ITV ni impuestos obligatorios.
 - Los pinchazos/reparaciones de rueda pertenecen a Taller/Reparación y no reinician km de neumáticos.
 
-## Funciones V8.3
+## Funciones V8.3.2
 - Mantiene el diseño oscuro y los ajustes visuales de V8.1/V8.2.
 - Seguro vigente se deduce de la existencia de una póliza sin fecha de fin; no depende de que exista una fecha de renovación.
 - Se elimina la pregunta manual “actual/vigente” al editar una póliza.
@@ -24,5 +24,12 @@
 - Fotos continúan en IndexedDB y la exportación JSON completa vuelve a incorporarlas a la copia transportable.
 
 ## Compatibilidad
-- V8.3 migra datos de versiones anteriores sin cambiar la clave localStorage.
+- V8.3.2 migra datos de versiones anteriores sin cambiar la clave localStorage.
 - `schemaVersion`: 8.3.
+
+
+## Categoría Otros
+- Sustituye a la antigua sección Bicis.
+- Agrupa vehículos que no requieren documentación de circulación en la aplicación.
+- No muestra matrícula, ITV, seguro ni impuestos.
+- Puede ocultar también mantenimiento con el indicador `skipMaintenance`.
