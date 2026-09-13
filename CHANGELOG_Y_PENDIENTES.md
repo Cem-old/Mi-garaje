@@ -1,4 +1,10 @@
-# Mi Garaje — V8.4
+# Mi Garaje — V8.4.1
+
+## Corrección V8.4.1
+- Fechas con año de dos cifras: 00–49 se interpretan como 2000–2049 y 50–99 como 1950–1999.
+- Reparación automática y limitada a `Fecha de compra`: si una fecha quedó entre 2050 y 2099 y está más de un año en el futuro, se resta exactamente un siglo.
+- Ordenación por fecha de compra mantiene los más recientes arriba.
+- No cambia la clave de almacenamiento ni el esquema de datos.
 
 ## Cambios
 - Reconstrucción de arranque y cambio físico de nombres de JS/CSS para romper cachés antiguas de Safari/PWA.

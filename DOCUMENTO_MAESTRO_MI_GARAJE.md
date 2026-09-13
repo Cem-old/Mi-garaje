@@ -1,4 +1,4 @@
-# DOCUMENTO MAESTRO — MI GARAJE V8.4
+# DOCUMENTO MAESTRO — MI GARAJE V8.4.1
 
 Base estable reconstruida a partir de V8.2/V8.3.2, manteniendo diseño y almacenamiento.
 
@@ -8,4 +8,4 @@ Base estable reconstruida a partir de V8.2/V8.3.2, manteniendo diseño y almacen
 - Secciones: Motos, Coches, Otros, Histórico.
 - Otros contiene bicicletas y vehículos trial no matriculables cuando estén clasificados como tal.
 - Los trial pueden quedar fuera de matrícula, ITV, seguro, impuesto y mantenimiento.
-- V8.4 usa archivos físicos `app-v84.js` y `app-v84.css` para evitar mezclas de caché con V8.3.x.
+- V8.4.1 usa archivos físicos `app-v841.js` y `app-v841.css` para evitar mezclas de caché con V8.3.x.
