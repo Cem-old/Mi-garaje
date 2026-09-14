@@ -1,3 +1,8 @@
-V8.4.1 basada en V8.4 estable. Corrige el tratamiento de años de dos cifras y repara automáticamente fechas de compra desplazadas 100 años. Usa nombres de archivos nuevos con nombres de archivos nuevos para evitar que Safari/PWA reutilice JavaScript/CSS defectuoso de V8.3.x.
-No cambia la clave localStorage: mi_garaje_public_demo_v1.
-No borra datos del navegador.
+V9.0 mantiene la misma clave de datos local: mi_garaje_public_demo_v1.
+No es necesario restaurar una copia JSON para actualizar desde V8.4.1.
+
+Tras publicar, abre Mi Garaje y comprueba el pie V9.0.
+Face ID está DESACTIVADO por defecto. Para activarlo:
+Más → Privacidad · Face ID → Activar Face ID.
+
+La app no almacena fotos ni plantillas biométricas.

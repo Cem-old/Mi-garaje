@@ -1,23 +1,21 @@
-# Mi Garaje — V8.4.1
+# Mi Garaje · V9.0
 
-## Corrección V8.4.1
-- Fechas con año de dos cifras: 00–49 se interpretan como 2000–2049 y 50–99 como 1950–1999.
-- Reparación automática y limitada a `Fecha de compra`: si una fecha quedó entre 2050 y 2099 y está más de un año en el futuro, se resta exactamente un siglo.
-- Ordenación por fecha de compra mantiene los más recientes arriba.
-- No cambia la clave de almacenamiento ni el esquema de datos.
+## Cambios incluidos
+- Histórico: tarjetas simplificadas con fecha de compra y fecha de venta (Desde → Hasta).
+- Taller / mantenimiento / reparación / revisión:
+  - km obligatorios al registrar una intervención nueva o editarla;
+  - por defecto propone los km actuales;
+  - muestra los km del vehículo en la intervención;
+  - calcula y muestra automáticamente los km recorridos desde entonces cuando existe km actual.
+- Pantalla de detalle:
+  - corregida la capa que podía oscurecer/difuminar tarjetas;
+  - mayor margen inferior para que el contenido no quede detrás del pie y navegación.
+- Privacidad:
+  - bloqueo opcional con WebAuthn y autenticación del dispositivo (Face ID en iPhone compatible);
+  - no se guarda ni transmite información biométrica;
+  - bloqueo manual y rebloqueo tras más de 30 segundos en segundo plano.
 
-## Cambios
-- Reconstrucción de arranque y cambio físico de nombres de JS/CSS para romper cachés antiguas de Safari/PWA.
-- Pantalla de error visible si el arranque falla; no vuelve a quedarse en negro sin explicación.
-- Safe area iPhone/Dynamic Island.
-- Seguros: vigente si la póliza no tiene fecha de fin; renovación anual calculable desde inicio; histórico de pagos soportado.
-- Gastos: importes sin decimales y con miles; vehículo pulsable y detalle de gastos.
-- Neumáticos: km recorridos = km actuales - km de montaje, aceptando 0 km.
-- Sección Bicis renombrada a Otros; admite Bicicleta y Trial.
-- Trial puede excluir matrícula, ITV, seguro, impuesto y mantenimiento mediante su clasificación de datos.
-- Corregido km actual 0 para que no aparezca como pendiente.
-
-## Seguridad de datos
-- localStorage: mi_garaje_public_demo_v1 (sin cambios).
-- Fotos: IndexedDB mi_garaje_photos_v1 (sin cambios).
-- No incluye datos privados en el paquete público.
+## Compatibilidad
+- Se conserva `mi_garaje_public_demo_v1`.
+- `schemaVersion` se mantiene en 8.4 porque no hay cambio incompatible de estructura.
+- Fotos continúan en IndexedDB `mi_garaje_photos_v1`.

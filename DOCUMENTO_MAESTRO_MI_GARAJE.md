@@ -1,11 +1,11 @@
-# DOCUMENTO MAESTRO — MI GARAJE V8.4.1
+# Mi Garaje
+Versión actual: **V9.0**
 
-Base estable reconstruida a partir de V8.2/V8.3.2, manteniendo diseño y almacenamiento.
+Base de datos local: `mi_garaje_public_demo_v1`
+Fotos: IndexedDB `mi_garaje_photos_v1`
 
-- Clave localStorage invariable: `mi_garaje_public_demo_v1`.
-- Fotos en IndexedDB: `mi_garaje_photos_v1`.
-- Nunca publicar JSON privados.
-- Secciones: Motos, Coches, Otros, Histórico.
-- Otros contiene bicicletas y vehículos trial no matriculables cuando estén clasificados como tal.
-- Los trial pueden quedar fuera de matrícula, ITV, seguro, impuesto y mantenimiento.
-- V8.4.1 usa archivos físicos `app-v841.js` y `app-v841.css` para evitar mezclas de caché con V8.3.x.
+V9.0 conserva el diseño dark existente y añade únicamente:
+1. Histórico Desde → Hasta.
+2. Km obligatorios y km desde intervención en Taller.
+3. Corrección visual del solapamiento del detalle.
+4. Face ID opcional mediante WebAuthn.
