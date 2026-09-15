@@ -1,21 +1,15 @@
-# Mi Garaje · V9.0
+# Mi Garaje · V9.0 consolidada
 
-## Cambios incluidos
-- Histórico: tarjetas simplificadas con fecha de compra y fecha de venta (Desde → Hasta).
-- Taller / mantenimiento / reparación / revisión:
-  - km obligatorios al registrar una intervención nueva o editarla;
-  - por defecto propone los km actuales;
-  - muestra los km del vehículo en la intervención;
-  - calcula y muestra automáticamente los km recorridos desde entonces cuando existe km actual.
-- Pantalla de detalle:
-  - corregida la capa que podía oscurecer/difuminar tarjetas;
-  - mayor margen inferior para que el contenido no quede detrás del pie y navegación.
-- Privacidad:
-  - bloqueo opcional con WebAuthn y autenticación del dispositivo (Face ID en iPhone compatible);
-  - no se guarda ni transmite información biométrica;
-  - bloqueo manual y rebloqueo tras más de 30 segundos en segundo plano.
+Incluye:
+- Face ID/WebAuthn opcional.
+- Histórico: Desde (compra) → Hasta (venta).
+- Taller: km obligatorios y km recorridos desde intervención.
+- Corrección de solapamiento/difuminado en detalle.
+- Neumáticos: marca, modelo, medidas delantera/trasera, fecha, km, taller, posición e importe.
+- ID de vehículo = alias. Alias únicos; al renombrar se actualizan referencias y foto.
+- Migración automática de IDs antiguos a alias, solo si todos los alias son únicos.
+- Parser revisado de importes, km y fechas.
+- Fechas de 2 dígitos: 00–49 → 2000–2049; 50–99 → 1950–1999.
+- Excel exporta IDs legibles basados en alias y los nuevos campos de neumáticos.
 
-## Compatibilidad
-- Se conserva `mi_garaje_public_demo_v1`.
-- `schemaVersion` se mantiene en 8.4 porque no hay cambio incompatible de estructura.
-- Fotos continúan en IndexedDB `mi_garaje_photos_v1`.
+Se conserva la clave local `mi_garaje_public_demo_v1` y la base de fotos `mi_garaje_photos_v1`.
